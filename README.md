@@ -1,5 +1,8 @@
 # Mechanistic-Interpretability-for-Vision-Models-Optimization
-# Vision Transformer on Tiny-ImageNet
+<!-- Badges affiancati -->
+[![Camilla Giuliani on GitHub](https://img.shields.io/badge/Camilla–Giuliani–GitHub-181717?style=flat-square&logo=github)](https://github.com/camygiuliani)
+[![Pietro D'Annibale on GitHub](https://img.shields.io/badge/Pietro–D%E2%80%99Annibale–GitHub-181717?style=flat-square&logo=github)](https://github.com/Sassotek)
+
 
 Project made for 2025 Computer Vision's course by Pietro D'Annibale, 1917211, and Camilla Giuliani, 1883207.
 
