@@ -30,7 +30,7 @@ https://colab.research.google.com/drive/1NNMyHI6ySeZPHcacPNtQd6y8-yUvGMZX
 
 
 ## Mechanistic Interpretabilty
-Mechanistic interpretability is a growing research area that aims to reverse-engineer neural networks by understanding their internal components and computations. While it has been mainly applied to small language models, recent studies have started exploring its use in Vision Transformers as well. In this project, starting from a baseline ViT, we observed the model behavior and tried to find a good compromise while trying to get a better inference time at the cost of a worse model accuracy cutting the edges in the computational graph that are less significative.
+Mechanistic Interpretability is a growing research area that aims to reverse-engineer neural networks by understanding their internal components and computations. While it has been mainly applied to small language models, recent studies have started exploring its use in Vision Transformers as well. In this project, starting from a baseline ViT, we analyzed the model's internal behavior using one Mechanistic Interpretability technique. Our goal was to find a good trade-off between inference time and model accuracy by pruning the computational graph. Specifically, we identified and removed edges that were less significant for the final prediction, aiming to reduce computational complexity while preserving core model functionality.
 
 ## Dataset
 The Tiny-ImageNet was downloaded from this Kaggle repository, cleaned and prepared for image classification tasks:    
@@ -69,6 +69,8 @@ The final results show that the initial loss in accuracy derived from the prunin
 
 ## Future works
 Optimizing the balance between inference efficiency and accuracy remains an open challenge. Future directions could include experimenting with higher τ values while compensating for accuracy loss using techniques like Knowledge Distillation or selective re-training of key components.
+
+We also looked into Edge Attribution Patching (EAP), a recent method proposed in [2](Attribution Patching Outperforms Automated Circuit Discovery,A. Syed et al,2024), as a faster and more efficient alternative to ACDC. It estimates the importance of each edge using attribution scores from a single backward pass. Although the idea is promising and has shown good results in other contexts, we decided not to implement it in this work due to limited gains in our specific setup. Still, combining EAP with ACDC—as suggested in [2]-might be worth exploring in future work.
 
 ## References 
 - [1][A. Conmy et al. (2023). Towards Automated Circuit Discovery for Mechanistic Interpretability. In: Advances
