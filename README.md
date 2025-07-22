@@ -38,7 +38,7 @@ The Tiny-ImageNet was downloaded from this Kaggle repository, cleaned and prepar
 This dataset is composed by 200 classes, with 64x64 images. For each class there are : 420 training samples, 50 validation samples and 80 test samples. To improve model robustness, we applied the following augmentations: random horizontal flip, random resized crop, random rotation, gaussian noise, random erasing, normalization with ImageNet mean & std, CutMix and MixUp.
 
 ## Model
-To obtain the best baseline model possible,  several enanchments to the train were tried, such as: knowledge distillation, both with fine-tuned model and a clone baseline model. However no improvements were obtained using this. The use of AMP scaler and CosineAnnealing scheduler was a good idea to make the model learning better.
+To obtain the best baseline model possible, several enanchments to the train were tried, such as: knowledge distillation, both with fine-tuned model and a clone baseline model. However, this approach did not lead to any noticeable improvements. The use of AMP scaler and CosineAnnealing scheduler was a good idea to make the model learning better.
 
 ## Training
 For the last version of our model was done a training cycle that produced a validation accuracy of ~35%.
